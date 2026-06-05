@@ -1,7 +1,8 @@
 from pathlib import Path
 import pandas as pd
 
-csv_path = Path(r"C:\Users\bhart\Downloads\urls2.txt")
+repo_root = Path(__file__).resolve().parent.parent
+csv_path = repo_root / "lookup" / "urls2.txt"
 
 df = pd.read_csv(csv_path, header=None, names=["url"])
 
